@@ -4,9 +4,9 @@ import numpy as np
 img = cv2.imread('image.jpg')
 
 sr = cv2.dnn_superres.DnnSuperResImpl_create()
-path = "EDSR_x2.pb"
+path = "LapSRN_x2.pb"
 sr.readModel(path)
-sr.setModel("edsr", 2)
+sr.setModel("lapsrn", 2)
  
 result = sr.upsample(img)
  
